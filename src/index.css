@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark tattoo shop theme */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 240 10% 4%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 6% 12%;
+    --accent-foreground: 0 0% 90%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 16%;
+    --input: 240 6% 16%;
+    --ring: 196 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Tattoo shop specific colors */
+    --neon-blue: 196 100% 50%;
+    --neon-blue-glow: 196 100% 70%;
+    --electric-red: 348 100% 50%;
+    --electric-red-glow: 348 100% 70%;
+    --neon-purple: 271 81% 56%;
+    --neon-purple-glow: 271 81% 76%;
+    --dark-surface: 240 8% 8%;
+    --darker-surface: 240 10% 4%;
+
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+    --gradient-fire: linear-gradient(135deg, hsl(var(--electric-red)), hsl(var(--neon-purple)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--darker-surface)), hsl(var(--dark-surface)));
+
+    /* Glows and shadows */
+    --glow-blue: 0 0 20px hsl(var(--neon-blue) / 0.5);
+    --glow-red: 0 0 20px hsl(var(--electric-red) / 0.5);
+    --glow-purple: 0 0 20px hsl(var(--neon-purple) / 0.5);
+    --shadow-neon: 0 0 30px hsl(var(--neon-blue) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
